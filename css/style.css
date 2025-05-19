@@ -1,0 +1,253 @@
+:root {
+    --verde-claro: #ffffff;
+    --verde-medio: #ffffff;
+    --gris-verde: #323929;
+    --verde-botón: #4CAF50;
+    --verde-botón-hover: #449d48;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--verde-claro);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main, section {
+    flex: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    background-color: var(--gris-verde);
+}
+
+.titulo_principal {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.8rem;
+    font-weight: normal;
+}
+
+/* NAVBAR */
+.navbar-nav .nav-link {
+    color: #000000 !important;
+    font-weight: 500;
+    margin: 0 12px;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.2); 
+}
+
+/* IMAGEN DESTACADA */
+.imagen-destacada {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    object-fit: cover;
+}
+
+#imagenFijaInicio img {
+    filter: contrast(1.1) brightness(1.1);
+    transition: all 0.3s ease;
+}
+
+.frase-inicio {
+    max-width: 90%;
+    text-align: center;
+    font-size: 1.4rem;
+    background-color: rgba(4, 4, 4, 0.377);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* SOBRE NOSOTROS */
+#sobre-nosotros {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    margin: 50px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    max-width: 1080px;
+    text-align: center;
+}
+
+#sobre-nosotros p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+section h3 {
+    color: var(--gris-verde);
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* GALERÍA */
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    filter: contrast(1.1) brightness(1.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* MAPA */
+.mapa-compacto {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.mapa-compacto iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* FORMULARIO DE CONSULTA */
+#formulario-consulta {
+    background-color: #dfdfdf;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#formulario-consulta .form-label {
+    font-weight: bold;
+}
+
+#formulario-consulta textarea {
+    resize: none;
+}
+
+#formulario-consulta button {
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#formulario-consulta button:hover {
+    background-color: var(--verde-botón-hover);
+    transform: scale(1.05);
+}
+
+/* REDES SOCIALES */
+.icono-red {
+    text-decoration: none;
+    color: var(--gris-verde);
+    font-size: 2.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icono-red:hover {
+    transform: scale(1.2);
+}
+
+.icono-red:hover .fa-facebook-f {
+    color: #1877f2;
+}
+
+.icono-red:hover .fa-instagram {
+    color: #e1306c;
+}
+
+/* BOTÓN WHATSAPP */
+.btn-success {
+    background-color: var(--verde-botón);
+    border-color: var(--verde-botón);
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-success:hover {
+    background-color: var(--verde-botón-hover);
+    border-color: var(--verde-botón-hover);
+    transform: scale(1.05);
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--verde-botón);
+    border-color: var(--verde-botón);
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    display: none; /* Oculto por defecto */
+    z-index: 1000;
+}
+
+#scrollToTopBtn:hover {
+    background-color: var(--verde-botón-hover);
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--gris-verde);
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin: 0 8px;
+        font-size: 0.95rem;
+    }
+
+    .frase-inicio {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .icono-red {
+        font-size: 1.8rem;
+    }
+
+    #sobre-nosotros {
+        padding: 25px 15px;
+    }
+}
